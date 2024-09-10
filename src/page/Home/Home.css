@@ -1,0 +1,36 @@
+#Home {
+  min-height: 92svh;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.todos_los_juegos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(222, 135, 135);
+  position: relative;
+}
+
+.todos_los_juegos > div > img {
+  width: 300px;
+}
+
+.todos_los_juegos > div > .favorite-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.todos_los_juegos > div > .favorite-icon:hover {
+  transform: scale(1.1);
+}

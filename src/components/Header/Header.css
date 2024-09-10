@@ -1,0 +1,20 @@
+header {
+  width: 100%;
+  position: sticky;
+  height: 8svh;
+  top: 0;
+  padding: 20px;
+  background-color: rgb(222, 135, 135);
+}
+
+nav > .navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+header a {
+  font-size: 17px;
+  color: black;
+}
