@@ -4,7 +4,9 @@ header {
   height: 8svh;
   top: 0;
   padding: 20px;
-  background-color: rgb(222, 135, 135);
+  background-color: #447a9c;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 nav > .navigation {
@@ -14,7 +16,32 @@ nav > .navigation {
   gap: 20px;
 }
 
+nav > .navigation li {
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+}
+
+nav > .navigation li:hover {
+  background-color: #a7dadc;
+  transform: scale(1.1);
+}
+
 header a {
   font-size: 17px;
   color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 30px;
+    height: 10svh;
+  }
+
+  nav > .navigation {
+    gap: 10px;
+  }
 }

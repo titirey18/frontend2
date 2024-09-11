@@ -4,7 +4,7 @@
   padding: 20px;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -13,15 +13,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   gap: 20px;
   padding: 20px;
-  background-color: rgb(222, 135, 135);
+  background-color: #a7dadc;
+  border: 5px solid #447a9c;
+  border-radius: 10px;
   position: relative;
+  box-sizing: border-box;
+}
+
+.todos_los_juegos:hover {
+  transform: scale(1.1);
+}
+
+.todos_los_juegos > h3 {
+  text-decoration: underline 2px solid #447a9c;
 }
 
 .todos_los_juegos > div > img {
-  width: 300px;
+  max-width: 300px;
+  height: 200px;
 }
 
 .todos_los_juegos > div > .favorite-icon {
@@ -33,4 +46,43 @@
 
 .todos_los_juegos > div > .favorite-icon:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #Home {
+    padding: 10px;
+    gap: 25px;
+  }
+
+  .todos_los_juegos {
+    max-width: 400px;
+    gap: 15px;
+  }
+
+  .todos_los_juegos > div > img {
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #Home {
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    gap: 25px;
+  }
+
+  .todos_los_juegos {
+    padding: 10px;
+  }
+  .todos_los_juegos > div > img {
+    max-width: 200px;
+    height: 150px;
+  }
+
+  .todos_los_juegos > div > .favorite-icon {
+    width: 20px;
+    height: 20px;
+  }
 }

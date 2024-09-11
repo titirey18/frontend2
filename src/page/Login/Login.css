@@ -5,6 +5,8 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
+  height: 80%;
+  margin: auto;
 }
 
 .Button-change {

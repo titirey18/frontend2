@@ -11,7 +11,10 @@ export const back = async ({
     Authorization: `Bearer ${token}`
   }
 
-  JSONis ? (headers['Content-Type'] = 'application/json') : null
+  if (JSONis) {
+    headers['Content-Type'] = 'application/json'
+    body = JSON.stringify(body)
+  }
 
   const res = await fetch(url + endpoint, {
     body,

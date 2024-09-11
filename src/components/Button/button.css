@@ -1,6 +1,7 @@
 .Change-button {
-  background-color: azure;
+  background-color: #1d3658;
   padding: 10px;
   border-radius: 9px;
   border: none;
+  color: #f2faef;
 }

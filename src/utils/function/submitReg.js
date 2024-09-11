@@ -1,3 +1,5 @@
+import { Header } from '../../components/Header/Header'
+import { Home } from '../../page/Home/Home'
 import { back } from '../API/Back'
 
 export const submitReg = async (e) => {

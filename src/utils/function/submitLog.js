@@ -17,6 +17,7 @@ export const submitLog = async (e) => {
     body,
     method: 'POST'
   })
+  console.log(body)
 
   if (resultado.error) {
     mostrarError(resultado.error)
