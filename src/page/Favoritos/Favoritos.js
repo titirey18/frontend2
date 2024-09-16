@@ -4,6 +4,13 @@ import './Favoritos.css'
 
 export const Favoritos = async () => {
   const div = creatpage('Favoritos')
+  const h2 = document.createElement('h2')
+  const juegosContainer = document.createElement('div')
+
+  h2.textContent = 'Mis juegos Favoritos😁'
+  h2.className = 'titulopage'
+
+  juegosContainer.className = 'juegos-container'
 
   const user = JSON.parse(localStorage.getItem('user'))
   const res = await back({
@@ -16,7 +23,7 @@ export const Favoritos = async () => {
   )
 
   for (const juego of favoritoJuegos) {
-    div.innerHTML += `
+    juegosContainer.innerHTML += `
       <div class="todos_los_juegos"> 
         <h3>${juego.title}</h3>
         <div>
@@ -25,4 +32,7 @@ export const Favoritos = async () => {
       </div>
     `
   }
+
+  div.append(h2)
+  div.append(juegosContainer)
 }

@@ -1,23 +1,26 @@
 import { Header } from '../../components/Header/Header'
 import { Home } from '../../page/Home/Home'
-import { back } from '../API/Back'
+import { back, mostrarError } from '../API/Back'
 
 export const submitLog = async (e) => {
   e.preventDefault()
 
-  const [nameput, passwordput] = e.target
+  const userName = e.target.userName.value.trim()
+  const password = e.target.password.value.trim()
 
-  const body = {
-    userName: nameput.value,
-    password: passwordput.value
+  if (!userName || !password) {
+    mostrarError('Por favor, ingresa usuario y contraseña')
+    return
   }
+
+  const body = { userName, password }
 
   const resultado = await back({
     endpoint: '/users/login',
     body,
-    method: 'POST'
+    method: 'POST',
+    token: null
   })
-  console.log(body)
 
   if (resultado.error) {
     mostrarError(resultado.error)

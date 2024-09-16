@@ -13,7 +13,7 @@ export const back = async ({
 
   if (JSONis) {
     headers['Content-Type'] = 'application/json'
-    body = JSON.stringify(body)
+    body = body && typeof body === 'string' ? body : JSON.stringify(body)
   }
 
   const res = await fetch(url + endpoint, {
@@ -33,7 +33,7 @@ export const back = async ({
   return resfinal
 }
 
-const mostrarError = (mensaje) => {
+export const mostrarError = (mensaje) => {
   const error = document.createElement('p')
   error.textContent = mensaje
   error.style.color = 'red'
