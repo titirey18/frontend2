@@ -24,7 +24,7 @@ export const back = async ({
 
   if (!res.ok) {
     const error = await res.json()
-    const mensajeError = error.message || 'Error en la solicitud'
+    const mensajeError = error.message || 'Contraseña o usuario incorrecto'
     mostrarError(mensajeError)
     return { error: mensajeError }
   }
@@ -34,8 +34,18 @@ export const back = async ({
 }
 
 export const mostrarError = (mensaje) => {
+  const errorExistente = document.querySelector('.error-mensaje')
+  if (errorExistente){
+    errorExistente.remove()
+  }
+
   const error = document.createElement('p')
+  error.classList.add('error-mensaje')
   error.textContent = mensaje
-  error.style.color = 'red'
+  error.style.color ='red'
+  error.style.fontSize = "1.2rem"
   document.body.append(error)
+
+  const formulario = document.querySelector("form")
+  formulario.prepend(error)
 }
