@@ -1,5 +1,5 @@
-const url = 'https://backend2-dway.vercel.app/'
-//http://localhost:3000/api/v1
+const url = 'http://localhost:3000/api/v1'
+
 export const back = async ({
   endpoint,
   body,
