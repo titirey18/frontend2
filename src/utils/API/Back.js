@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/api/v1'
+const url = 'https://backend2-dway-git-main-thiagos-projects-3f331038.vercel.app/'
 
 export const back = async ({
   endpoint,
