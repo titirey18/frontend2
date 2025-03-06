@@ -1,4 +1,4 @@
-const url = 'https://backend2-ij1n.onrender.com'
+const url = 'https://backend2-p7cm.onrender.com'
 
 export const back = async ({
   endpoint,
